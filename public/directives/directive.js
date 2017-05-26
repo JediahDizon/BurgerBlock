@@ -1,6 +1,6 @@
-homepageApp.directive("user", function() {
+restaurantApp.directive("createBurger", function() {
 	return {
-		templateUrl: "/directives/templates/user.html",
+		templateUrl: "/directives/templates/createBurger.html",
 		restrict: "AECM",
 		replace: true
 	};

@@ -29,11 +29,17 @@
 		<script src="/routes/routeProvider.js"></script>
 
 		<!-- SERVICES -->
+		<script src="/services/orderManager.js"></script>
 		
 		<!-- CONTROLLERS -->
 		<script src="/controllers/homeController.js"></script>
+		<script src="/controllers/createBurgerController.js"></script>
+		<script src="/controllers/createController.js"></script>
+		<script src="/controllers/menuController.js"></script>
+		<script src="/controllers/cartController.js"></script>
 
 		<!-- DIRECTIVES -->
+		<script src="/directives/directive.js"></script>
 		
 		<!-- STYLESHEET -->
 		<link rel="stylesheet" href="/resources/css/style.css" />
@@ -42,7 +48,7 @@
 	<body>
 		<div class="container-fluid">
 			<div class="row text-center">
-				<div class="col-12">
+				<div class="col-6 offset-3">
 					<img class="img-fluid" src="/resources/Images/Logo.png" />
 				</div>
 			</div>
@@ -53,16 +59,16 @@
 						<div class="card-block">
 							<div class="row text-center">
 								<div class="col-3">
-									<a href="#!deals"><h3>DEALS</h3></a>	
+									<a href="#!deals"><h5>DEALS</h5></a>	
 								</div>
 								<div class="col-3">
-									<a href="#!menu"><h3>BURGERS</h3></a>
+									<a href="#!menu"><h5>BURGERS</h5></a>
 								</div>
 								<div class="col-3">
-									<a href="#!create"><h3>CREATE</h3></a>
+									<a href="#!create"><h5>CREATE</h5></a>
 								</div>
 								<div class="col-3">
-									<a href="#!cart"><h3>CART</h3></a>
+									<a href="#!cart"><h5>CART</h5></a>
 								</div>
 							</div>
 						</div>
