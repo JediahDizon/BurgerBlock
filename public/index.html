@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="restaurantApp">
+	<head>
+		<title>Burger Restaurant</title>
+		<link rel="icon" type="image/png"  href="https://angular.io/resources/images/logos/angularjs/AngularJS-Shield.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta charset="UTF-8">
+	
+	
+		<!-- BOOTSTRAP -->
+		<link rel="stylesheet" href="/resources/Font Awesome/css/font-awesome.min.css" />
+		<link href="/resources/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="/resources/Bootstrap/css/mdb.min.css" rel="stylesheet" />
+	
+		<!-- BOOTSTRAP LADDA -->
+		<link rel="stylesheet" href="/resources/Bootstrap Ladda/dist/ladda-themeless.min.css" />
+		<script src="/resources/Bootstrap Ladda/dist/spin.min.js"></script>
+		<script src="/resources/Bootstrap Ladda/dist/ladda.min.js"></script>
+		
+		<!-- AngularJS via CDN -->
+		<script src="//code.angularjs.org/1.6.0-rc.2/angular.min.js"></script>
+		<script src="//code.angularjs.org/1.6.0-rc.2/angular-route.min.js"></script>
+		<script src="//code.angularjs.org/1.6.0-rc.2/angular-resource.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-cookies.js"></script>
+		<script src="/app.js"></script>
+		
+		<!-- ROUTES -->
+		<script src="/routes/routeProvider.js"></script>
+
+		<!-- SERVICES -->
+		
+		<!-- CONTROLLERS -->
+		<script src="/controllers/homeController.js"></script>
+
+		<!-- DIRECTIVES -->
+		
+		<!-- STYLESHEET -->
+		<link rel="stylesheet" href="/resources/css/style.css" />
+	</head>
+	
+	<body>
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-12">
+					<img class="img-fluid" src="/resources/Images/Logo.png" />
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-block">
+							<div class="row text-center">
+								<div class="col-3">
+									<a href="#!deals"><h3>DEALS</h3></a>	
+								</div>
+								<div class="col-3">
+									<a href="#!menu"><h3>BURGERS</h3></a>
+								</div>
+								<div class="col-3">
+									<a href="#!create"><h3>CREATE</h3></a>
+								</div>
+								<div class="col-3">
+									<a href="#!cart"><h3>CART</h3></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div ng-view></div>
+		</div>
+		
+		<!-- JQUERY -->
+		<script type="text/javascript" src="/resources/Bootstrap/js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="/resources/Bootstrap/js/tether.min.js"></script>
+		<script type="text/javascript" src="/resources/Bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/resources/Bootstrap/js/mdb.min.js"></script>
+
+		<!-- BOOTSTRAP TOGGLE -->
+		<script src="/resources/Bootstrap Toggle/js/bootstrap-toggle.min.js"></script>
+
+		<!-- SCRIPT -->
+		<script type="text/javascript" src="/resources/js/script.js"></script>
+	</body>
+</html>
