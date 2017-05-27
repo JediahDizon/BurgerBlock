@@ -5,6 +5,10 @@ restaurantApp.service("orderManager", ["$http", function($http) {
 	 */
 	this.orderItems = [];
 	
+	this.removeItem = function(index) {
+		this.orderItems.splice(index, 1);
+	}
+	
 	/**
 	 * This "PLACE ORDER" function will place all of the orders that the user
 	 * has added to their cart. Since this is a front-end only
@@ -27,7 +31,10 @@ restaurantApp.service("orderManager", ["$http", function($http) {
 				}
 				localStorage.setItem(localStorage.length, JSON.stringify(this.orderItem));
 			};
-			this.orderItems = [];
+			
+			while(this.orderItems.length > 0) {
+				this.orderItems.pop();
+			}
 		} else {
 			alert("This browser doesn't support local storage to store orders. Please use an HTML5 compliant browser.");
 		}

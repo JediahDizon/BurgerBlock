@@ -3,10 +3,10 @@
  * yet when Ladda and MDB is loaded. That would result in buttons not being
  * binded to their corresponding plugins.
  */
-//setTimeout(function MDB() {
-//	Waves.attach(".btn", ["waves-light"]);
-//	setTimeout(MDB, 500);
-//}, 500);
+setTimeout(function MDB() {
+	Waves.attach(".btn", ["waves-light"]);
+	setTimeout(MDB, 500);
+}, 500);
 
 setTimeout(function Ladda() {
 	startLadda();

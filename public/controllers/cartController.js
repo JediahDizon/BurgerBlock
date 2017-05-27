@@ -2,11 +2,14 @@ restaurantApp.controller("cartController", ["$scope", "$window", "orderManager",
 	$scope.orderItems = orderManager.orderItems;
 	$scope.orderedItems = orderManager.getOrders();
 	
-	console.log($scope.orderedItems);
-	
 	$scope.placeOrder = function() {
 		orderManager.placeOrder();
-		$scope.orderItems = orderManager.orderItems;
+		console.log($scope.orderItems);
 		$scope.orderedItems = orderManager.getOrders();
+		$("#orderModal").modal();
+	};
+	
+	$scope.removeItem = function(index) {
+		orderManager.removeItem(index);
 	}
 }]);

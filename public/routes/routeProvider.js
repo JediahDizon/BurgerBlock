@@ -3,6 +3,9 @@ restaurantApp.config(function($routeProvider) {
 		.when("/", {
 			templateUrl: "/pages/home.html",
 			controller: "homeController"
+		}).when("/home", {
+			templateUrl: "/pages/home.html",
+			controller: "homeController"
 		}).when("/cart", {
 			templateUrl: "/pages/cart.html",
 				controller: "cartController"

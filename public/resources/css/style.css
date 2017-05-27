@@ -1,6 +1,6 @@
 body {
 	background-image: url("/resources/Backgrounds/Background - Noise 2.png");
-	font-size: 1rem;
+	font-size: .75rem;
 }
 
 body > .container-fluid {
@@ -18,12 +18,14 @@ h1, h2, h3, h4, h5 {
 
 .btn-outline-primary {
 	background-color: white !important;
+	border-color: #e59948;
+	color: #e59948;
 }
-.btn-primary, .btn-primary:disabled {
+.btn-primary {
 	background-color: #e59948;
 	background: #e59948;
 }
-.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover, .btn-primary:disabled {
 	background-color: #f5b571 !important;
 	background: #f5b571 !important;
 }

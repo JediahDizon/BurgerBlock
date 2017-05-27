@@ -4,7 +4,7 @@
 			<div class="card-img">
 				<img class="img-fluid" src="http://clipartall.com/subimg/burger-clipart-burger-clipart-3983_3404.jpg" />
 			</div>
-			<div class="card-block">
+			<div class="card-block collapse" id="{{$index}}">
 				<h4 class="card-title text-center">Personal Burger</h4>
 				<div class="row">
 					<div class="col-12 col-sm-6">
@@ -14,17 +14,17 @@
 							</th>
 							
 							<tr>
-								<td ng-if="orderItem.vegetables.cheese")>
+								<td ng-if="orderItem.vegetables.cheese">
 									Cheese
 								</td>
 							</tr>
 							<tr>
-								<td ng-if="orderItem.vegetables.lettuce")>
+								<td ng-if="orderItem.vegetables.lettuce">
 									Lettuce
 								</td>
 							</tr>
 							<tr>
-								<td ng-if="orderItem.vegetables.tomato")>
+								<td ng-if="orderItem.vegetables.tomato">
 									Tomato
 								</td>
 							</tr>
@@ -36,44 +36,67 @@
 								Sauce
 							</th>
 							<tr>
-								<td  ng-if="orderItem.sauces.ketchup")>
+								<td  ng-if="orderItem.sauces.ketchup">
 									Ketchup
 								</td>
 							</tr>
 							<tr>
-								<td ng-if="orderItem.sauces.mustard")>
+								<td ng-if="orderItem.sauces.mustard">
 									Mustard
 								</td>
 							</tr>
 							<tr>
-								<td ng-if="orderItem.sauces.oregano")>
+								<td ng-if="orderItem.sauces.oregano">
 									Oregano
 								</td>
 							</tr>
 						</table>
 					</div>
 				</div>
-			</div>
-		</div>	
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-12">
-		<div class="card">
-			<div class="card-block">
-				<h4 class="text-center">Cart</h4>
-				<hr />
-				<div class="row">
-				<div class="col-12 col-sm-4 offset-sm-4">
-						<p ng-if="orderItems.length == 0">
-							Nothing on cart yet! Check out our directory of burgers and place an order.
-						</p>
-						<input type="button" class="btn btn-primary btn-block" value="Place Order" ng-click="placeOrder()" ng-disabled="{{orderItems.length === 0}}" />
+				<div class="row" ng-if="orderItem.protein !== ''">
+					<div class="col-12">
+						<table class="table table-bordered">
+							<th>
+								Protein
+							</th>
+							<tr>
+								<td>
+									{{ orderItem.protein }}
+								</td>
+							</tr>
+						</table>
 					</div>
 				</div>
 			</div>
-		</div>	
+			<div class="card-block">
+				<button class="btn btn-primary btn-sm btn-block" data-toggle="collapse" data-target="#{{$index}}">
+					<i class="fa fa-caret-down" aria-hidden="true"></i>
+				</button>
+				<br />
+				<a ng-click="removeItem($index)">Remove Item</a>
+			</div>
+		</div>
+	</div>
+	<div class="col-6 col-sm-4">
+	<div class="card">
+			<div class="card-block">
+				<div class="row">
+					<div class="col-12">
+						<a href="#!create" class="text-center">
+							<h3><i class="fa fa-plus" aria-hidden="true"></i></h3>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<p ng-if="orderItems.length == 0">
+							Nothing on cart yet! Check out our directory of burgers and place an order.
+						</p>
+						<input type="button" class="btn btn-primary btn-block" value="Place Order" ng-click="placeOrder()" ng-disabled="orderItems.length === 0" />
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -84,54 +107,108 @@
 				<h4 class="text-center">Order History</h4>
 				<hr />
 				<div class="row" ng-repeat="orderedItem in orderedItems">
-					<div class="col-12 col-sm-6 offset-sm-3">
+					<div class="col-12">
 						<div class="row">
-							<div class="col-4 offset-4">
-								<img class="img-fluid" src="http://clipartall.com/subimg/burger-clipart-burger-clipart-3983_3404.jpg" />
+							<div class="col-12">
+								<p>Ordered in {{ orderedItem.timestamp }}</p>
 							</div>
 						</div>
-						<table class="table table-bordered">
-							<th>
-								Vegetables
-							</th>
-							<th>
-								Sauce
-							</th>
-							
-							<tr>
-								<td ng-if="orderedItem.item.vegetables.cheese")>
-									Cheese
-								</td>
-								<td  ng-if="orderedItem.item.sauces.ketchup")>
-									Ketchup
-								</td>
-							</tr>
-							<tr>
-								<td ng-if="orderedItem.item.vegetables.lettuce")>
-									Lettuce
-								</td>
-								<td ng-if="orderedItem.item.sauces.mustard")>
-									Mustard
-								</td>
-							</tr>
-							<tr>
-								<td ng-if="orderedItem.item.vegetables.tomato")>
-									Tomato
-								</td>
-								<td ng-if="orderedItem.item.sauces.oregano")>
-									Oregano
-								</td>
-							</tr>
-							<tr>
-								<td colspan=2>Ordered in {{ orderedItem.timestamp }}</td>
-							</tr>
-						</table>
-						
-						<hr />
+						<div class="row">
+							<div class="col-12">
+								<div class="row">
+									<div class="col-4">
+										<img class="img-fluid" src="http://clipartall.com/subimg/burger-clipart-burger-clipart-3983_3404.jpg" />
+									</div>
+									<div class="col-8">
+										<div class="row">
+											<div class="col-6">
+											<table class="table table-bordered">
+												<th>
+													Vegetables
+												</th>
+												
+												<tr>
+													<td ng-if="orderedItem.item.vegetables.cheese">
+														Cheese
+													</td>
+												</tr>
+												<tr>
+													<td ng-if="orderedItem.item.vegetables.lettuce">
+														Lettuce
+													</td>
+												</tr>
+												<tr>
+													<td ng-if="orderedItem.item.vegetables.tomato")>
+														Tomato
+													</td>
+												</tr>
+											</table>
+										</div>
+											<div class="col-6">
+												<table class="table table-bordered">
+													<th>
+														Sauce
+													</th>
+													
+													<tr>
+														<td  ng-if="orderedItem.item.sauces.ketchup">
+															Ketchup
+														</td>
+													</tr>
+													<tr>
+														<td ng-if="orderedItem.item.sauces.mustard">
+															Mustard
+														</td>
+													</tr>
+													<tr>
+														<td ng-if="orderedItem.item.sauces.oregano">
+															Oregano
+														</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+										<div class="row" ng-if="orderedItem.item.protein !== ''">
+											<div class="col-12">
+												<table class="table table-bordered">
+													<th>
+														Protein
+													</th>
+													<tr>
+														<td>
+															{{ orderedItem.item.protein }}
+														</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<hr />
+							</div>
+						</div>
 					</div>
 				</div>
-				
 			</div>
 		</div>	
+	</div>
+</div>
+
+<div class="modal fade" id="orderModal" role="dialog">
+	<div class="modal-dialog">
+	
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Thank You!</h4>
+			</div>
+			<div class="modal-body">
+				<p>Your order has been processed! Thanks for ordering at Burger Block.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	
 	</div>
 </div>
