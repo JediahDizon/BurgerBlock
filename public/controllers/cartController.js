@@ -1,4 +1,4 @@
-restaurantApp.controller("cartController", ["$scope", "orderManager", function($scope, orderManager) {
+restaurantApp.controller("cartController", ["$scope", "$window", "orderManager", function($scope, $window, orderManager) {
 	$scope.orderItems = orderManager.orderItems;
 	$scope.orderedItems = orderManager.getOrders();
 	
@@ -6,5 +6,7 @@ restaurantApp.controller("cartController", ["$scope", "orderManager", function($
 	
 	$scope.placeOrder = function() {
 		orderManager.placeOrder();
+		$scope.orderItems = orderManager.orderItems;
+		$scope.orderedItems = orderManager.getOrders();
 	}
 }]);

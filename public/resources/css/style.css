@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5 {
 .btn-outline-primary {
 	background-color: white !important;
 }
-.btn-primary {
+.btn-primary, .btn-primary:disabled {
 	background-color: #e59948;
 	background: #e59948;
 }

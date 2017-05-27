@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-4" ng-repeat="orderItem in orderItems">
+	<div class="col-6 col-sm-4" ng-repeat="orderItem in orderItems">
 		<div class="card">
 			<div class="card-img">
 				<img class="img-fluid" src="http://clipartall.com/subimg/burger-clipart-burger-clipart-3983_3404.jpg" />
@@ -69,7 +69,7 @@
 						<p ng-if="orderItems.length == 0">
 							Nothing on cart yet! Check out our directory of burgers and place an order.
 						</p>
-						<input type="button" class="btn btn-primary btn-block" value="Place Order" ng-click="placeOrder()" />
+						<input type="button" class="btn btn-primary btn-block" value="Place Order" ng-click="placeOrder()" ng-disabled="{{orderItems.length === 0}}" />
 					</div>
 				</div>
 			</div>
@@ -84,52 +84,53 @@
 				<h4 class="text-center">Order History</h4>
 				<hr />
 				<div class="row" ng-repeat="orderedItem in orderedItems">
-					<div class="col-12 col-sm-6">
+					<div class="col-12 col-sm-6 offset-sm-3">
+						<div class="row">
+							<div class="col-4 offset-4">
+								<img class="img-fluid" src="http://clipartall.com/subimg/burger-clipart-burger-clipart-3983_3404.jpg" />
+							</div>
+						</div>
 						<table class="table table-bordered">
 							<th>
 								Vegetables
 							</th>
-							
-							<tr>
-								<td ng-if="orderedItem.vegetables.cheese")>
-									Cheese
-								</td>
-							</tr>
-							<tr>
-								<td ng-if="orderedItem.vegetables.lettuce")>
-									Lettuce
-								</td>
-							</tr>
-							<tr>
-								<td ng-if="orderedItem.vegetables.tomato")>
-									Tomato
-								</td>
-							</tr>
-						</table>
-					</div>
-					<div class="col-12 col-sm-6">
-						<table class="table table-bordered">
 							<th>
 								Sauce
 							</th>
+							
 							<tr>
-								<td  ng-if="orderedItem.sauces.ketchup")>
+								<td ng-if="orderedItem.item.vegetables.cheese")>
+									Cheese
+								</td>
+								<td  ng-if="orderedItem.item.sauces.ketchup")>
 									Ketchup
 								</td>
 							</tr>
 							<tr>
-								<td ng-if="orderedItem.sauces.mustard")>
+								<td ng-if="orderedItem.item.vegetables.lettuce")>
+									Lettuce
+								</td>
+								<td ng-if="orderedItem.item.sauces.mustard")>
 									Mustard
 								</td>
 							</tr>
 							<tr>
-								<td ng-if="orderedItem.sauces.oregano")>
+								<td ng-if="orderedItem.item.vegetables.tomato")>
+									Tomato
+								</td>
+								<td ng-if="orderedItem.item.sauces.oregano")>
 									Oregano
 								</td>
 							</tr>
+							<tr>
+								<td colspan=2>Ordered in {{ orderedItem.timestamp }}</td>
+							</tr>
 						</table>
+						
+						<hr />
 					</div>
 				</div>
+				
 			</div>
 		</div>	
 	</div>
