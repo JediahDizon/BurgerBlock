@@ -56,7 +56,24 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="card">
-						<div class="card-block collapse" id="navbar">
+						<div class="card-block hidden-xs-down">
+							<div class="row text-center">
+								<div class="col-12 col-sm-3">
+									<a href="#!home" class="btn btn-primary btn-block">HOME</a>	
+								</div>
+								<div class="col-12 col-sm-3">
+									<a href="#!menu" class="btn btn-primary btn-block">MENU</a>
+								</div>
+								<div class="col-12 col-sm-3">
+									<a href="#!create" class="btn btn-primary btn-block">CREATE</a>
+								</div>
+								<div class="col-12 col-sm-3">
+									<a href="#!cart" class="btn btn-primary btn-block">CART</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card-block hidden-sm-up collapse" id="navbar">
 							<div class="row text-center">
 								<div class="col-12 col-sm-3">
 									<a href="#!home" class="btn btn-primary btn-block">HOME</a>	
@@ -88,6 +105,10 @@
 			</div>
 			<div ng-view></div>
 		</div>
+		
+		<footer class="text-center">
+			Burger Block 2017 - All Rights Reserved
+		</footer>
 		
 		<!-- JQUERY -->
 		<script type="text/javascript" src="/resources/Bootstrap/js/jquery-3.1.1.min.js"></script>
