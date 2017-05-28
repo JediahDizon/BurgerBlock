@@ -17,8 +17,6 @@ This is a front-end web application that is able to display a menu of burgers in
 manage orders made by users, the kind which allows online ordering. Users are also capable of making their own custom
 burger if they wish to do so. The application uses AngualrJS to manage all front-end functionalities.
 
-![Wireframe](https://github.com/JediahDizon/BurgerBlock/blob/master/doc/Wireframe.png "Wireframe")
-
 ### Project Requirements
 ![Project Requirements](https://github.com/JediahDizon/BurgerBlock/blob/master/doc/Requirements.png "Project Requirements")
 
@@ -81,3 +79,7 @@ Considering the scope of this project and the time limit of the project, securit
 
 ## Contribute
 PRs accepted.
+
+## Miscelaneous
+### Wireframe
+![Wireframe](https://github.com/JediahDizon/BurgerBlock/blob/master/doc/Wireframe.png "Wireframe")
