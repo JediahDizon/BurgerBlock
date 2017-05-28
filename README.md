@@ -10,6 +10,7 @@ A new Burger joint in town has opened and needs a web=based front-end to process
 - [IDE](#ide)
 - [Security](#security)
 - [Contribute](#contribute)
+- [Miscellaneous](#miscellaneous)
 
 ## Documentation
 ### Overview
@@ -80,6 +81,6 @@ Considering the scope of this project and the time limit of the project, securit
 ## Contribute
 PRs accepted.
 
-## Miscelaneous
+## Miscellaneous
 ### Wireframe
 ![Wireframe](https://github.com/JediahDizon/BurgerBlock/blob/master/doc/Wireframe.png "Wireframe")
