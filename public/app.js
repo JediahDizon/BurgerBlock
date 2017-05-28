@@ -1,1 +1,1 @@
-var restaurantApp = angular.module("restaurantApp", ["ngRoute", "ngResource", "ngCookies"]);
+var restaurantApp = angular.module("restaurantApp", ["ngRoute"]);

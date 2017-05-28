@@ -5,6 +5,9 @@ restaurantApp.service("orderManager", ["$http", function($http) {
 	 */
 	this.orderItems = [];
 	
+	this.addItem = function(toAdd) {
+		this.orderItems.push(toAdd);
+	}
 	this.removeItem = function(index) {
 		this.orderItems.splice(index, 1);
 	}
