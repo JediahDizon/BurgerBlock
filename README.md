@@ -56,7 +56,7 @@ This is a front-end web application and the requirements does not expect a back-
 the nature of the requirements, a form of data storage is needed, so the web application takes advantage of the browser's
 local storage to save data like "Order History."
 
-![Database Schema](https://github.com/JediahDizon/BurgerBlock/blob/master/doc/Database Schema.png "Database Schema")
+![Database Schema](https://github.com/JediahDizon/BurgerBlock/blob/master/doc/Database%20Schema.PNG "Database Schema")
 
 ## Install
 - Install Node JS in the link provided above
@@ -67,10 +67,10 @@ local storage to save data like "Order History."
 
 ### Sample Run
 #### Create Your Own Burger
-![Create Your Own Burger](https://github.com/JediahDizon/BurgerBlock/blob/master/doc/Sample Run/Create.png "Create Your Own Burger")
+![Create Your Own Burger](https://github.com/JediahDizon/BurgerBlock/blob/master/doc/Sample%20Run/Create.png "Create Your Own Burger")
 
 #### My Cart
-![My Cart](https://github.com/JediahDizon/BurgerBlock/blob/master/doc/Sample Run/My Cart.png "My Cart")
+![My Cart](https://github.com/JediahDizon/BurgerBlock/blob/master/doc/Sample%20Run/Cart.png "My Cart")
 
 ## IDE
 Any IDE would work on this project by importing it as a "Generic Project."
