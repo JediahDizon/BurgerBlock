@@ -2,7 +2,7 @@
 ![Burger Block](https://github.com/JediahDizon/BurgerBlock/blob/master/doc/Logo.png "Logo")
 
 # Burger Block
-A new Burger joint in town has opened and needs a web=based front-end to process online orders for customers.
+A new Burger joint in town has opened and needs a web based front-end to process online orders for customers.
 
 ## Table of Contents
 - [Documentation](#documentation)
@@ -32,8 +32,8 @@ all of which <b>requires a database back-end</b> that stores all these necessary
 requirements states that this project must be implemented in React JS/Angular JS, both of which aren't in the
 same realm of storing information like a databases does. I was intrigued on figuring out just how I can approach this project.
 
-Basically, what I have to do is to implement a robust front-end web application but somehow expected to add functionalities
-that needs a database, without actually having access to a database. I don't believe this is possible nor practical unless 
+Basically, what I have to do is to implement a robust front-end web application and somehow add functionalities
+that needs a database <b>without</b> actually having access to a database. I don't believe this is possible nor practical unless 
 handcoding is considered okay. In that case, it gives the impression that this application isn't aimed to be robust, 
 which I don't think is the case.
 
@@ -66,6 +66,7 @@ local storage to save data like "Order History."
 - Using your browser, you are able to use the web application in this link: `http://localhost:3000`
 
 ### Sample Run
+Once the web server is serving the web application, you should see something similar to the screenshots below.
 #### Create Your Own Burger
 ![Create Your Own Burger](https://github.com/JediahDizon/BurgerBlock/blob/master/doc/Sample%20Run/Create.png "Create Your Own Burger")
 
