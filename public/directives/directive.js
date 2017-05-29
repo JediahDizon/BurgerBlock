@@ -5,3 +5,10 @@ restaurantApp.directive("createBurger", function() {
 		replace: true
 	};
 });
+restaurantApp.directive("weatherForecast", function() {
+	return {
+		templateUrl: "/directives/templates/weatherForecast.html",
+		restrict: "AECM",
+		replace: true
+	};
+});

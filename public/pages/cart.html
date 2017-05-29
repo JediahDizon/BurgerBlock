@@ -107,7 +107,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-6 col-sm-4">
+	<div class="col-6 col-md-4">
 	<div class="card">
 			<div class="card-block">
 				<div class="row">
@@ -139,9 +139,6 @@
 				<div class="row" ng-repeat="orderedItem in orderedItems">
 					<div class="col-12">
 						<div class="row">
-							<div class="col-12">
-								<p>Ordered in {{ orderedItem.timestamp }}</p>
-							</div>
 						</div>
 						<div class="row">
 							<div class="col-12">
@@ -150,6 +147,11 @@
 										<img class="img-fluid" src="http://clipartall.com/subimg/burger-clipart-burger-clipart-3983_3404.jpg" />
 									</div>
 									<div class="col-8">
+										<div class="row">
+											<div class="col-12">
+												<p>Ordered in {{ orderedItem.timestamp }}</p>
+											</div>
+										</div>
 										<div class="row">
 											<div class="col-6">
 												<table class="table table-bordered" ng-if="orderedItem.item.vegetables.cheese || orderedItem.item.vegetables.lettuce || orderedItem.item.vegetables.tomato">
